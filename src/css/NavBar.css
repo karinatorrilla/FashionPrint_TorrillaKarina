@@ -1,0 +1,35 @@
+.lado_izquierdo
+{
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+	height: 52px;
+	width: 50%;
+}
+.lado_derecho{
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+	height: 100%;
+	width: 50%;
+}
+.logo_img
+{
+	display: block;
+	width: 150px;
+	height: 72px;
+	position: relative;
+	box-sizing: border-box;
+}
+.logo_img img
+{
+	display: block;
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+}
+a.cntent_after_line::after {
+  content: "\2223";
+  padding-left: 10px;
+  color: #d1d1d1;
+}
