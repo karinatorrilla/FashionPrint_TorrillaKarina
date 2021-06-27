@@ -7,7 +7,7 @@ import './css/NavBar.css';
 import 'bulma/css/bulma.css';
 
 export const CoderApp = () => {
-	const greeting = "Welcome to the jungle!";
+	const greeting = "Productos destacados";
 	return (
 		<div>
 			<NavBar/>

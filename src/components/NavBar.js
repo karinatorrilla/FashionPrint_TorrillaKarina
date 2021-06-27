@@ -30,7 +30,7 @@ export const NavBar = () => {
 							    </p>
 							</div>
 			   			</div>
-			   			<a className="navbar-item" href="/" >Productos</a>
+			   			<a className="navbar-item is-active" href="/" >Productos</a>
 					    <a className="navbar-item" href="/" >Contacto</a>
 					    <a className="navbar-item cntent_after_line" href="/">
 					        <span className="icon-text">

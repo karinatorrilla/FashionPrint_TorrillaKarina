@@ -44,3 +44,84 @@
     margin: 0.5rem 0;
     font-family: cursive;
 }
+.w100
+{
+  width: 100%;
+  display: block;
+}
+.text_aling_center
+{
+      text-align: center;
+}
+.txt_left_negrita
+{
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #010101;
+  font-weight: bold;
+  padding-right: 5px;
+}
+.txt_left_negrita_claro
+{
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  font-weight: bold;
+  padding-right: 5px;
+
+}
+.lado_izquiero_linea{
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  border-right: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  border-left: 1px solid #d1d1d1;
+}
+.lado_derecho_linea
+{
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  border-right: 1px solid #d1d1d1;
+}
+.margin_top_bot
+{
+  margin: 7px 0;
+}
+._padding_box
+{
+  padding: 2rem 3rem;
+}
+.cant_number_producto
+{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.imagen_producto {
+    width: auto !important;
+    padding: 10px !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+.is_zoom
+{
+    padding: 2rem !important;
+}
+.is_zoom:hover {
+  transform: scale(1.2) !important;
+}
