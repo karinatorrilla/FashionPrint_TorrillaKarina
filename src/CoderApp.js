@@ -9,9 +9,9 @@ import 'bulma/css/bulma.css';
 export const CoderApp = () => {
 	const greeting = "Productos destacados";
 	return (
-		<div>
+		<>
 			<NavBar/>
 			<ItemListContainer greeting = {greeting}/>
-		</div>
+		</>
 	)
 }

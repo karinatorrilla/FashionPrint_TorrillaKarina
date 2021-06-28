@@ -9,7 +9,6 @@ import { ProductosApp } from './ProductosApp';
 export const ItemListContainer = ({greeting}) => {
 
 	const [items, setItems] = useState([])
-	//USE STATE HOOK
 	const [number, setNumbero] = useState(0)
 	//PRODUCTOS
 	const [productos, setProductos] = useState([])
@@ -27,7 +26,7 @@ export const ItemListContainer = ({greeting}) => {
 	const promiseCargando  = () =>{
 
 		return new Promise((resolve, reject) => {
-			//aca va a ir la consulta a la API
+			//aca va a ir la consulta a la API simulada 
 			setTimeout(
 				() => {
 					setItems(items)
@@ -49,15 +48,15 @@ export const ItemListContainer = ({greeting}) => {
 		<>
 			{productos.length === 0 ? (<h1 className="title_home">Cargando...</h1>) : (
 				<>
-					<div>
+					<div id="content_body_page">
 						<h2 className="title_home">{greeting} <i className="fas fa-fire"></i></h2>
 						<div className="_padding_box">
 							<div className="columns is-12 ">
 								{productos.map((producto) => (
 									<div className="column is-3 is_zoom " key={producto.id}>
 										<div className="card">
-										  <div className="card-image">
-										    <figure className="image is-4by3">
+										  <div>
+										    <figure>
 										    	<img className="imagen_producto" src={producto.img} alt={producto.nombre}/>
 										    </figure>
 										  </div>
