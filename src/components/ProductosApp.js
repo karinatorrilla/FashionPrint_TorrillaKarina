@@ -1,8 +1,165 @@
- export const ProductosApp  = [
-	{id:1, destacado: true, nombre:'CAMPERA', stock: 5, img:'https://static.zara.net/photos///2021/V/0/1/p/3427/741/320/2/w/294/3427741320_6_1_1.jpg?ts=1612523674819'},
-	{id:2, destacado: true, nombre:'REMERA', stock: 15, img:'https://static.zara.net/photos///2021/W/0/1/p/5857/324/610/2/w/846/5857324610_6_1_1.jpg?ts=1615280533401'},
-	{id:3, destacado: false, nombre:'BUZO', stock: 19, img:'https://static.zara.net/photos///2021/W/0/1/p/5039/608/800/2/w/846/5039608800_6_1_1.jpg?ts=1613408949542'},
-	{id:4, destacado: true, nombre:'CAMISA', stock: 26, img:'https://static.zara.net/photos///2020/I/0/1/p/5107/044/800/2/w/846/5107044800_6_1_1.jpg?ts=1605514490019'},
-	{id:5, destacado: true, nombre:'JEAN', stock: 40, img:'https://static.zara.net/photos///2021/W/0/1/p/9123/911/406/2/w/565/9123911406_6_1_1.jpg?ts=1612438694458'}
-
+export const ProductosApp = [
+  {
+    id: 1,
+    destacado: true,
+    nombre: "CAZADORA CROPPED",
+    precio: "6.590,00",
+    stock: 5,
+    categoria: "ABRIGOS",
+    detalle:
+      "CAZADORA CORTA DE CUELLO SUBIDO CON CAPUCHA AJUSTABLE CON CORDONES ELÁSTICOS Y STOPPER. MANGA LARGA",
+    img: "https://static.zara.net/photos///2021/V/0/1/p/3427/741/320/2/w/750/3427741320_6_1_1.jpg?ts=1612523674819",
+  },
+  {
+    id: 2,
+    destacado: true,
+    nombre: "CAMISETA BÁSICA",
+    precio: "1.690,00",
+    stock: 15,
+    categoria: "REMERAS",
+    detalle: "CAMISETA DE CUELLO REDONDO Y MANGA CORTA.",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/5857/324/610/2/w/846/5857324610_6_1_1.jpg?ts=1615280533401",
+  },
+  {
+    id: 3,
+    destacado: false,
+    nombre: "SUDADERA CROP TIE DYE",
+    precio: "6.590,00",
+    stock: 19,
+    categoria: "BUZOS",
+    detalle:
+      "SUDADERA CORTA DE CUELLO SUBIDO Y MANG ALARGA ACABADA EN ELÁSTICO. BAJO AJUSTABLE CON CORDONES",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/5039/608/800/2/w/846/5039608800_6_1_1.jpg?ts=1613408949542",
+  },
+  {
+    id: 4,
+    destacado: true,
+    nombre: "BLUSA TERCIOPELO LENTEJUELAS",
+    precio: "10.990,00",
+    stock: 26,
+    categoria: "CAMISAS",
+    detalle:
+      "BLUSA DE CUELLO REDONDO CON ABERTURA Y CORDONES ACABADOS EN BORLA. MANGA LARGA ACABADA EN PUÑO.",
+    img: "https://static.zara.net/photos///2020/I/0/1/p/5107/044/800/2/w/846/5107044800_6_1_1.jpg?ts=1605514490019",
+  },
+  {
+    id: 5,
+    destacado: true,
+    nombre: "JEANS Z1975 MOM FIT",
+    precio: "6.590,00",
+    stock: 49,
+    categoria: "JEANS",
+    detalle:
+      "JEANS DE TIRO ALTO CON CINCO BOLSILLOS. CIERRE FRONTAL CON CREMALLERA Y BOTÓN METÁLICO.",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/9123/911/406/2/w/565/9123911406_6_1_1.jpg?ts=1612438694458",
+  },
+  {
+    id: 6,
+    destacado: true,
+    nombre: "ABRIGO CRUZADO BOTONES",
+    precio: "17.990,00 ",
+    stock: 13,
+    categoria: "ABRIGOS",
+    detalle:
+      "ABRIGO DE CUELLO Y SOLAPA CON MANGA LARGA. BOLSILLOS DELANTEROS CON SOLAPA. CIERRE FRONTAL CRUZADO CON BOTONES.",
+    img: "https://static.zara.net/photos///2019/I/0/1/p/8217/769/704/2/w/750/8217769704_6_1_1.jpg?ts=1569515427273",
+  },
+  {
+    id: 7,
+    destacado: true,
+    nombre: "CAZADORA EFECTO PIEL",
+    precio: "10.990,00",
+    stock: 50,
+    categoria: "ABRIGOS",
+    detalle:
+      "CAZADORA DE CUELLO Y SOLAPA. MANGA LARGA CON TRABILLAS EN HOMBROS. BOLSILLOS EN DELANTERO CON CREMALLERA METÁLICA. CIERRE FRONTAL CON CREMALLERA.",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/3046/943/800/2/w/750/3046943800_6_1_1.jpg?ts=1611672903252",
+  },
+  {
+    id: 8,
+    destacado: true,
+    nombre: "BLUSA BOLSILLOS",
+    precio: "7.190,00",
+    stock: 22,
+    categoria: "CAMISAS",
+    detalle:
+      "BLUSA FLUIDA DE CUELLO SOLAPA Y MANGA LARGA. BOLSILLOS DELANTEROS DE PLASTRÓN CON SOLAPA. CIERRE FRONTAL CON BOTONES.",
+    img: "https://static.zara.net/photos///2020/I/0/1/p/9479/249/251/2/w/750/9479249251_6_1_1.jpg?ts=1592210322174",
+  },
+  {
+    id: 9,
+    destacado: true,
+    nombre: "BLUSA FLOCADO PATA DE GALLO",
+    precio: "5.990,00",
+    stock: 47,
+    categoria: "CAMISAS",
+    detalle:
+      "BLUSA DE CUELLO REDONDO CON ABERTURA Y LAZO. MANGA LARGA ACABADA EN PUÑO ELÁSTICO. DETALLE ELÁSTICO TIPO NIDO DE ABEJA EN PECHERA.",
+    img: "https://static.zara.net/photos///2019/I/0/1/p/7484/168/800/3/w/750/7484168800_6_1_1.jpg?ts=1574354737575",
+  },
+  {
+    id: 10,
+    destacado: true,
+    nombre: "CAMISA POPELÍN VOLANTES",
+    precio: "6.590,00",
+    stock: 61,
+    categoria: "CAMISAS",
+    detalle:
+      "CAMISA CORTA DE ESCOTE REDONDO Y MANGA LARGA ACABADA EN ELÁSTICO Y VOLANTE. DETALLE DE TEJIDO ELÁSTICO TIPO NIDO DE ABEJA.",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/3666/801/250/2/w/750/3666801250_6_1_1.jpg?ts=1611672828855",
+  },
+  {
+    id: 11,
+    destacado: true,
+    nombre: "JEANS MOM FIT ROTOS",
+    precio: "6.590,00",
+    stock: 120,
+    categoria: "JEANS",
+    detalle:
+      "JEANS DE TIRO ALTO Y CINCO BOLSILLOS. DETALLE DE ROTOS EN DELANTERO. CIERRE FRONTAL CON CREMALLERA Y BOTÓN METÁLICO.",
+    img: "https://static.zara.net/photos///2021/S/0/1/p/4365/837/401/2/w/750/4365837401_6_1_1.jpg?ts=1625046582811",
+  },
+  {
+    id: 12,
+    destacado: true,
+    nombre: "JEANS HI RISE SCULPT",
+    precio: "6.590,00",
+    stock: 25,
+    categoria: "JEANS",
+    detalle:
+      "JEANS DE TIRO ALTO CON TEJIDO ELÁSTICO FABRICADO DE MANERA QUE AYUDA A POTENCIAR Y MOLDEAR LA FIGURA GRACIAS A SU TECNOLOGÍA. CINCO BOLSILLOS. EFECTO LAVADO. CIERRE FRONTAL CON CREMALLERA Y BOTÓN METÁLICO.",
+    img: "https://static.zara.net/photos///2021/W/0/1/p/8197/952/800/2/w/750/8197952800_6_1_1.jpg?ts=1611673868211",
+  },
+  {
+    id: 13,
+    destacado: true,
+    nombre: "JEANS ZW SKINNY",
+    precio: "7.190,00",
+    stock: 40,
+    categoria: "JEANS",
+    detalle: "SLIM FIT - SKINNY LEG - HIGH RISE JEANS ZW SIGNATURE DENIM",
+    img: "https://static.zara.net/photos///2021/V/0/1/p/6045/042/800/2/w/750/6045042800_6_1_1.jpg?ts=1606825704564",
+  },
+  {
+    id: 14,
+    destacado: true,
+    nombre: "JEANS Z1975 SUPER HIGH RISE VINTAGE SLIM",
+    precio: "6.590,00",
+    stock: 36,
+    categoria: "JEANS",
+    detalle:
+      "JEANS DE TIRO ALTO CON CINCO BOLSILLOS. EFECTO LAVADO. CIERRE FRONTAL CON CREMALLERA Y BOTÓN METÁLICO.",
+    img: "https://static.zara.net/photos///2020/V/0/1/p/6164/071/406/2/w/750/6164071406_6_1_1.jpg?ts=1589208380418",
+  },
+  {
+    id: 15,
+    destacado: true,
+    nombre: "VESTIDO TUBO",
+    precio: "6.590,00",
+    stock: 11,
+    categoria: "VESTIDOS",
+    detalle:
+      "VESTIDO MIDI DE ESCOTE RECTO Y TIRANTES FINOS. BAJO ACABADO CON ABERTURA LATERAL. CIERRE EN ESPALDA CON CREMALLERA OCULTA EN COSTURA.",
+    img: "https://static.zara.net/photos///2021/V/0/1/p/7969/029/800/2/w/750/7969029800_6_1_1.jpg?ts=1611154820023",
+  },
 ];
