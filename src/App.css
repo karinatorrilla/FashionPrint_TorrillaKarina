@@ -152,3 +152,30 @@ div#root {
   transform: scale(1.1) !important;
   cursor: pointer;
 }
+/* ITEMDETAIL */
+.padding_detail_item {
+  padding: 10rem 16rem;
+}
+.content_lado_left {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  height: 450px;
+  box-sizing: border-box;
+}
+.content_lado_rigth {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  height: 450px;
+  box-sizing: border-box;
+}
+.txt_aling_left {
+  text-align: left;
+}
+.imagen_detail {
+  width: auto;
+  height: 100%;
+  display: block;
+  padding: 5px;
+}

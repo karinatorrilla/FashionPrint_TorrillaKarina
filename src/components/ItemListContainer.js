@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { ProductosApp } from "./ProductosApp";
-
+import { ItemList } from "./ItemList";
 // require('react-dom');
 // window.React2 = require('react');
 // console.log(window.React1 === window.React2);
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
-  const [number, setNumero] = useState(0);
+
   //PRODUCTOS
   const [productos, setProductos] = useState([]);
 
-  //Suma producto
-  //   const sumaProducto = () => {
-  //     setNumero(number + 1);
-  //   };
-
-  //Resta producto
-  //   const restaProducto = () => {
-  //     setNumero(number - 1);
-  //   };
   //promesa
   const promiseCargando = () => {
     return new Promise((resolve, reject) => {
@@ -31,14 +22,14 @@ export const ItemListContainer = ({ greeting }) => {
     });
   };
 
-  const consultaPromesa = () => {
+  // const consultaPromesa = () => {
+
+  // };
+  useEffect(() => {
     promiseCargando().then((data) => {
       const productoFiltrado = data.filter((producto) => producto.destacado);
       setProductos(productoFiltrado);
     });
-  };
-  useEffect(() => {
-    consultaPromesa();
   }, []);
   return (
     <>
@@ -53,58 +44,7 @@ export const ItemListContainer = ({ greeting }) => {
             <div className="_padding_box">
               <div className="columns is-multiline ">
                 {productos.map((producto) => (
-                  <div className="column is-4 is_zoom " key={producto.id}>
-                    <div className="card">
-                      <div>
-                        <figure>
-                          <img
-                            className="imagen_producto"
-                            src={producto.img}
-                            alt={producto.nombre}
-                          />
-                        </figure>
-                      </div>
-                      <div className="card-content">
-                        <div className="w100 text_aling_center margin_top_bot">
-                          <span className="title is-6 ">{producto.nombre}</span>
-                        </div>
-                        <div className="w100 text_aling_center margin_top_bot">
-                          <span className="title is-6">{producto.precio}</span>
-                        </div>
-                        {/* <div className="w100 margin_top_bot">
-                          <div className="lado_izquiero_linea">
-                            <span className="txt_left_negrita">STOCK: </span>
-                            <span className="txt_left_negrita_claro">
-                              {" "}
-                              {producto.stock}
-                            </span>
-                          </div>
-                          <div className="lado_derecho_linea">
-                            <span className="txt_left_negrita">COMPRAR: </span>
-                            <span className="txt_left_negrita_claro">
-                              {number}{" "}
-                            </span>
-                          </div>
-                        </div> */}
-
-                        {/* <div className="w100 text_aling_center margin_top_bot">
-                          <button
-                            className="button is-rounded"
-                            onClick={restaProducto}
-                          >
-                            <i className="fas fa-minus"></i>
-                          </button>
-                          <span className="cant_number_producto">{number}</span>
-                          <button
-                            className="button is-rounded"
-                            onClick={sumaProducto}
-                          >
-                            <i className="fas fa-plus"></i>
-                          </button>
-                        </div> */}
-                      </div>
-                    </div>
-                  </div>
+                  <ItemList key={producto.id} {...producto} />
                 ))}
               </div>
             </div>
