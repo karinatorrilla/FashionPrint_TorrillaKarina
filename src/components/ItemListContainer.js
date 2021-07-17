@@ -1,35 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { ProductosApp } from "./ProductosApp";
 import { ItemList } from "./ItemList";
+import { db } from "../firebase";
 // require('react-dom');
 // window.React2 = require('react');
 // console.log(window.React1 === window.React2);
 
 export const ItemListContainer = ({ greeting }) => {
-  const [items, setItems] = useState([]);
-
   //PRODUCTOS
   const [productos, setProductos] = useState([]);
 
-  //promesa
-  const promiseCargando = () => {
-    return new Promise((resolve, reject) => {
-      //aca va a ir la consulta a la API simulada
-      setTimeout(() => {
-        setItems(items);
-        resolve(ProductosApp);
-      }, 2000);
+  const getProducts = () =>{
+    const docs = [];
+    db.collection("productos").onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          console.log(doc.id);
+          console.log(doc.data());
+          docs.push({...doc.data(), id: doc.id})
+      });
+      setProductos(docs);
     });
   };
-
-  // const consultaPromesa = () => {
-
-  // };
   useEffect(() => {
-    promiseCargando().then((data) => {
-      const productoFiltrado = data.filter((producto) => producto.destacado);
-      setProductos(productoFiltrado);
-    });
+    getProducts();
   }, []);
   return (
     <>
