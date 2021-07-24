@@ -1,6 +1,7 @@
 import React from "react";
-import { CartWidget } from "./CartWidget";
-import logo_wonder from "../assets/img/logo_wonder.png";
+import { CartWidget } from "../CartWidget/index.js";
+import logo_wonder from "../../assets/img/logo_wonder.png";
+import "./NavBar.css";
 
 export const NavBar = () => {
   const openBurgerNav = () => {

@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { ItemList } from "./ItemList";
-import { db } from "../firebase";
-// require('react-dom');
-// window.React2 = require('react');
-// console.log(window.React1 === window.React2);
+import { ItemList } from "../ItemList/index.js";
+import { db } from "../../firebase";
 
 export const ItemListContainer = ({ greeting }) => {
-  //PRODUCTOS
   const [productos, setProductos] = useState([]);
 
-  const getProducts = () =>{
-    const docs = [];
-    db.collection("productos").onSnapshot((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
+  useEffect(() => {
+    const getProducts = () => {
+      const docs = [];
+      db.collection("productos").onSnapshot((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           console.log(doc.id);
           console.log(doc.data());
-          docs.push({...doc.data(), id: doc.id})
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        setProductos(docs);
       });
-      setProductos(docs);
-    });
-  };
-  useEffect(() => {
+    };
     getProducts();
   }, []);
   return (
@@ -30,9 +26,7 @@ export const ItemListContainer = ({ greeting }) => {
       ) : (
         <>
           <div id="content_body_page">
-            <h2 className="title_home">
-              {greeting} <i className="fas fa-fire"></i>
-            </h2>
+            <h2 className="title_home">{greeting}</h2>
             <div className="_padding_box">
               <div className="columns is-multiline ">
                 {productos.map((producto) => (
@@ -46,3 +40,4 @@ export const ItemListContainer = ({ greeting }) => {
     </>
   );
 };
+export default ItemListContainer;

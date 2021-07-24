@@ -1,7 +1,8 @@
 //ACA DEBO MOSTRAR EL DETALLE DE CADA PRODUCTO
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ItemDetailContainer } from "./ItemDetailContainer";
 
-export const ItemDetail = ({ id, nombre, precio, img, detalle, stock }) => {
+export const ItemDetail = ({ producto }) => {
   const [number, setNumero] = useState(0);
   //Suma producto
   const sumaProducto = () => {
@@ -16,18 +17,22 @@ export const ItemDetail = ({ id, nombre, precio, img, detalle, stock }) => {
     <>
       <div className="padding_detail_item">
         <div className="content_lado_left">
-          <img className="imagen_detail" src={img} alt={nombre} />
+          <img
+            className="imagen_detail"
+            src={producto.img}
+            alt={producto.nombre}
+          />
         </div>
         <div className="content_lado_rigth txt_aling_left">
-          <span className="title is-4">{nombre}</span>
-          <p className="title is-6">{detalle}</p>
+          <span className="title is-4">{producto.nombre}</span>
+          <p className="title is-6">{producto.detalle}</p>
           <br></br>
-          <span className="title is-6">${precio}</span>
+          <span className="title is-6">${producto.precio}</span>
           <br></br>
           <div className="w100 margin_top_bot">
             <div className="lado_izquiero_linea">
               <span className="txt_left_negrita">STOCK: </span>
-              <span className="txt_left_negrita_claro"> {stock}</span>
+              <span className="txt_left_negrita_claro"> {producto.stock}</span>
             </div>
             <div className="lado_derecho_linea">
               <span className="txt_left_negrita">COMPRAR: </span>
@@ -46,7 +51,7 @@ export const ItemDetail = ({ id, nombre, precio, img, detalle, stock }) => {
               </button>
             )}
             <span className="cant_number_producto">{number}</span>
-            {number >= stock ? (
+            {number >= producto.stock ? (
               <button
                 className="button is-rounded"
                 title="No hay mas stock"
@@ -60,8 +65,12 @@ export const ItemDetail = ({ id, nombre, precio, img, detalle, stock }) => {
               </button>
             )}
           </div>
+          <div>
+            <button class="button is-primary" onClick={ buyItem }>Comprar</button>
+          </div>
         </div>
       </div>
     </>
   );
 };
+export default ItemDetail;

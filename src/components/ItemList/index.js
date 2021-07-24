@@ -1,8 +1,9 @@
 //ACA DEBO MOSTRAR EL LISTADO DE LOS PRODUCTOS
 import React from "react";
+import { ItemListContainer } from "../ItemListContainer/index.js";
 import { Link } from "react-router-dom";
 
-export const ItemList = ({ id, nombre, precio, img }) => {
+export const ItemList = ({ id, img, nombre, precio }) => {
   return (
     <>
       <div className="column is-4 is_zoom ">
@@ -27,3 +28,4 @@ export const ItemList = ({ id, nombre, precio, img }) => {
     </>
   );
 };
+export default ItemList;
