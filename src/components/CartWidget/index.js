@@ -1,5 +1,4 @@
 import React from "react";
-import FormCheckout from "../Checkout/FormCheckout";
 import { Link } from "react-router-dom";
 
 export const CartWidget = () => {

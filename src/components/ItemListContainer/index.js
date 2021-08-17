@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { ItemList } from "../ItemList/index.js";
 import { db } from "../../firebase";
 
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = ({ greeting}) => {
+
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -10,8 +11,6 @@ export const ItemListContainer = ({ greeting }) => {
       const docs = [];
       db.collection("productos").onSnapshot((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          // console.log(doc.id);
-          // console.log(doc.data());
           docs.push({ ...doc.data(), id: doc.id });
         });
         setProductos(docs);

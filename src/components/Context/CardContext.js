@@ -26,9 +26,13 @@ export const BagProvider = ({ children }) => {
         }
     };
 
+    const acumular = (acumulador, item) =>
+        acumulador + item.precio * item.cantidad;
+    const totalValor = bagg.reduce(acumular, 0);
+
     return (
         <BagContext.Provider
-            value={{ bagg, setBagg, clearBag, addBag, inBag }}
+            value={{ bagg, setBagg, clearBag, addBag, inBag, totalValor }}
         >
             {children}
         </BagContext.Provider>
