@@ -10,8 +10,8 @@ export const ItemListContainer = ({ greeting }) => {
       const docs = [];
       db.collection("productos").onSnapshot((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          console.log(doc.id);
-          console.log(doc.data());
+          // console.log(doc.id);
+          // console.log(doc.data());
           docs.push({ ...doc.data(), id: doc.id });
         });
         setProductos(docs);

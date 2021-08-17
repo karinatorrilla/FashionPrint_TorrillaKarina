@@ -1,6 +1,5 @@
 //ACA DEBO MOSTRAR EL LISTADO DE LOS PRODUCTOS
 import React from "react";
-import { ItemListContainer } from "../ItemListContainer/index.js";
 import { Link } from "react-router-dom";
 
 export const ItemList = ({ id, img, nombre, precio }) => {
@@ -8,7 +7,7 @@ export const ItemList = ({ id, img, nombre, precio }) => {
     <>
       <div className="column is-4 is_zoom ">
         <Link to={`/producto/${id}`}>
-          <div className="card">
+          <div className="card" key={id}>
             <div>
               <figure>
                 <img className="imagen_producto" src={img} alt={nombre} />

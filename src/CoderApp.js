@@ -2,8 +2,7 @@ import React from "react";
 import { NavBar } from "./components/NavBar/index.js";
 import { ItemListContainer } from "./components/ItemListContainer/index.js";
 import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer.js";
-import { ItemDetail } from "./components/ItemDetail/ItemDetail.js";
-import { ItemList } from "./components/ItemList/index";
+import { FormCheckout } from "./components/Checkout/FormCheckout.js";
 import { BagProvider } from "./components/Context/CardContext.js";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -22,6 +21,7 @@ export const CoderApp = () => {
             </Route>
             <Route path="/producto/:id" component={ItemDetailContainer} />
             <Route path="/categoria/:categoryname"> </Route>
+            <Route path="/checkout/:"  component={FormCheckout}> </Route>
           </Switch>
         </BrowserRouter>
       </BagProvider>
