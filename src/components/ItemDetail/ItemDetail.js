@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import { BagContext } from "../Context/CardContext";
 import { Link } from "react-router-dom";
 
+
 export const ItemDetail = ({ producto }) => {
     const [number, setNumero] = useState(0);
 
@@ -28,7 +29,7 @@ export const ItemDetail = ({ producto }) => {
                     />
                 </div>
                 <div className="content_lado_rigth txt_aling_left">
-                    <span className="title is-4">{producto.nombre}</span>
+                    <span className="title is-4 padding_bottom">{producto.nombre}</span>
                     <p className="title is-6">{producto.detalle}</p>
                     <br></br>
                     <span className="title is-6">${producto.precio}</span>
@@ -87,16 +88,16 @@ export const ItemDetail = ({ producto }) => {
                                     </button>
                                 )}
                                 <button
-                                    className="button is-primary"
+                                    className="button is-primary comprar_item"
                                     onClick={() => AddBagg(number)}
                                 >
                                     Comprar
                                 </button>
                             </div>
                         ) : (
-                            <Link to={`/checkout`}>
-                                <button className="button is-primary">
-                                    Ir a la bolsa
+                            <Link to={`/checkout`} className="w100">
+                                <button className="button is-primary w100">
+                                    Ver bolsa
                                 </button>
                             </Link>
                         )}

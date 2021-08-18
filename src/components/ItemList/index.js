@@ -18,7 +18,7 @@ export const ItemList = ({ id, img, nombre, precio }) => {
                 <span className="title is-6 ">{nombre}</span>
               </div>
               <div className="w100 text_aling_center margin_top_bot">
-                <span className="title is-6">{precio}</span>
+                <span className="title is-6"> ${precio}</span>
               </div>
             </div>
           </div>

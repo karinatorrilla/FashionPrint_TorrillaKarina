@@ -1,0 +1,20 @@
+.imagen_checkout {
+  width: auto;
+  height: 100%;
+  display: block;
+  padding: 5px;
+}
+.button_card_checkout {
+  display: none !important;
+}
+.form_checkout {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.content_checkout {
+  padding: 3rem 2rem;
+}
+.padding_checkout_card {
+  padding: 1rem;
+}

@@ -10,7 +10,7 @@ import { ItemListContainerCategory } from "./components/ItemListContainerCategor
 import "bulma/css/bulma.css";
 
 export const CoderApp = () => {
-    const greeting = "Productos destacados";
+    const greeting = "Fashion Print";
     return (
         <>
             <BagProvider>
